@@ -1,0 +1,109 @@
+@font-face {
+  font-family: "Permanent Marker";
+  src: url("../fonts/Permanent_Marker/PermanentMarker-Regular.ttf");
+}
+@font-face {
+  font-family: "Fira Code";
+  src: url("../fonts/Fira_Code/FiraCode-VariableFont_wght.ttf");
+}
+
+$black_1: #000000;
+$black_2: #171717;
+$black_3: #2e2e2e;
+$black_4: #454545;
+$black_5: #5c5c5c;
+$black_6: #737373;
+$black_7: #8a8a8a;
+$grey_1: #f2f2f2;
+$yellow: #ffd100;
+
+.styles {
+  color: $black_2;
+  h1 {
+    font-family: "Permanent Marker";
+    font-size: 36px;
+  }
+  h2 {
+    margin: 0;
+    font-family: "Permanent Marker";
+    font-size: 32px;
+  }
+  h3 {
+    font-family: "Fira Code";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  h4 {
+    font-family: "Permanent Marker";
+    font-size: 20px;
+  }
+
+  p,
+  span {
+    font-family: "Fira Code";
+    font-size: 16px;
+    color: $black_3;
+  }
+}
+.marginTop {
+  padding-top: 100px;
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 1000px) {
+  .wrapper {
+    max-width: 100%;
+    padding: 24px;
+  }
+}
+
+.primaryBtn {
+  font-family: "Fira Code";
+  padding: 10px 25px;
+  background-color: $black_2;
+  color: white;
+  border-radius: 3px;
+  border: 2px solid $black_2;
+  text-decoration: none;
+
+  &:hover {
+    background-color: white;
+    color: $black_2;
+    cursor: pointer;
+  }
+}
+.secondaryBtn {
+  @extend .primaryBtn;
+  background-color: transparent;
+  color: $black_2;
+}
+
+.clickedSecBtn {
+  font-family: "Fira Code";
+  padding: 10px 25px;
+  background-color: $black_2;
+  color: white;
+  border-radius: 3px;
+  border: 2px solid $black_2;
+  text-decoration: none;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .header_backgroundImg {
+    background-size: 230px;
+    padding-left: 0;
+  }
+  .styles {
+    h2 {
+      font-size: 25px;
+    }
+  }
+}

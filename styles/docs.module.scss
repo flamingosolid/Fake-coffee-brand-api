@@ -1,0 +1,59 @@
+@use "global.module.scss" as v;
+
+.fetchMethods {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 48px;
+  max-width: 100%;
+}
+
+.background_color_textfield {
+  padding: 1rem 2rem;
+  margin: 16px 0;
+  border-radius: 5px;
+  background-color: v.$grey_1;
+  color: v.$black_2;
+
+  p {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+}
+
+.tips {
+  display: flex;
+  gap: 1rem;
+}
+
+.header_backgroundImg {
+  background: url("../public/Group.svg");
+  background-repeat: no-repeat;
+  background-size: 270px;
+  background-position-y: center;
+  padding-left: 5px;
+}
+
+.header_container {
+  margin-top: 30px;
+}
+
+@media only screen and (max-width: 300px) {
+  .header_backgroundImg {
+    background-size: 230px;
+    padding-left: 0;
+  }
+}
+@media only screen and (max-width: 473px) {
+  .header_container {
+    margin-top: 105px;
+    text-align: center;
+  }
+  .header_backgroundImg {
+    background-position: center;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .header_container {
+    margin-top: 105px;
+  }
+}

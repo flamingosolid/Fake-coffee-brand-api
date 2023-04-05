@@ -1,0 +1,119 @@
+@use "../styles/global.module.scss" as v;
+
+.navbar {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+
+.navbarContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Permanent Marker";
+
+  max-width: 1000px;
+  margin: 0 auto;
+
+  .navbar__logo {
+    display: flex;
+    font-size: 20px;
+  }
+  .navbar__list {
+    display: flex;
+    gap: 32px;
+    justify-content: flex-end;
+  }
+  .navbar__item {
+    list-style: none;
+  }
+  .navbar__link {
+    color: v.$black_1;
+    text-decoration: none;
+    font-size: 20px;
+    a {
+      text-decoration: none;
+    }
+  }
+  .logo {
+    height: 6rem;
+    width: 6rem;
+  }
+}
+
+.navbar__footer {
+  height: 200px;
+  margin-top: 100px;
+  color: rgba(255, 255, 255, 0.774);
+  font-family: "Permanent Marker";
+  background-color: v.$black_2;
+  display: grid;
+  grid-template-columns: 100px 150px auto 150px 100px;
+  grid-template-rows: auto;
+  align-content: space-around;
+  justify-items: center;
+  align-items: center;
+
+  .footer_icons {
+    grid-column: 2 / span 1;
+    .footer_built_with {
+      padding-left: 10px;
+      font-family: "Fira Code";
+      font-size: 10px;
+    }
+    img {
+      width: 20px;
+      height: 20px;
+      padding: 7px;
+    }
+  }
+
+  .footer_text {
+    grid-column: 3 / span 1;
+    text-align: center;
+  }
+
+  .made_by {
+    display: flex;
+    gap: 1rem;
+    font-family: "Fira Code";
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .navbarContainer {
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    .navbar__list {
+      padding: 0;
+      gap: 16px;
+    }
+    .logo {
+      display: none;
+    }
+  }
+
+  .navbar__footer {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    .footer_icons {
+      text-align: center;
+      padding: 0;
+    }
+
+    .footer_text {
+      text-align: center;
+      font-size: 10px;
+    }
+  }
+}
+@media only screen and (max-width: 473px) {
+  .navbarContainer {
+    .navbar_display_none {
+      display: none;
+    }
+  }
+}
